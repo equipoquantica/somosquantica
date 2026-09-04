@@ -1,0 +1,38 @@
+.audience {
+  padding: 64px 0;
+  background: var(--bg-soft);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.audience__lead {
+  font-family: var(--font-heading);
+  color: var(--white);
+  font-weight: 700;
+  font-size: 1.4rem;
+  margin-bottom: 32px;
+}
+
+.audience__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.audience__card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+}
+
+.audience__card p {
+  color: var(--text);
+  font-size: 1rem;
+}
+
+@media (max-width: 900px) {
+  .audience__grid {
+    grid-template-columns: 1fr;
+  }
+}
