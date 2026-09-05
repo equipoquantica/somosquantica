@@ -14,9 +14,9 @@ function App() {
       <Navbar />
       <main>
         <Hero />
+        <Services />
+        <About />
         <div className="light-shell">
-          <Services />
-          <About />
           <Process />
           <Signals />
         </div>
