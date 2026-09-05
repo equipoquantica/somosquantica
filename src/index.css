@@ -6,15 +6,26 @@
   --blue: #2f56c9;
   --blue-bright: #4d7cf0;
   --blue-line: #5aa9f5;
+  --accent: #1e9bef;
+  --accent-2: #6fc6ff;
   --cream: #f7f1e6;
   --white: #ffffff;
   --text: #eef2fb;
   --text-muted: #a9b8da;
   --border: rgba(255, 255, 255, 0.1);
+  --border-strong: rgba(255, 255, 255, 0.22);
   --radius: 18px;
+  --radius-lg: 32px;
   --max-width: 1180px;
   --font-heading: "Sora", system-ui, sans-serif;
   --font-body: "Manrope", system-ui, sans-serif;
+
+  --paper: #f2f5fa;
+  --paper-raised: #ffffff;
+  --ink: #0b1730;
+  --ink-soft: #5b6b8c;
+  --line: rgba(11, 23, 48, 0.12);
+  --line-strong: rgba(11, 23, 48, 0.22);
 }
 
 * {
@@ -153,6 +164,40 @@ button {
   flex-shrink: 0;
 }
 
+.btn-outline {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: var(--border-strong);
+  color: var(--white);
+}
+
+.btn-outline:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.light-shell {
+  background: var(--paper);
+  color: var(--ink);
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  position: relative;
+  z-index: 2;
+}
+
+.light-shell h2,
+.light-shell h3,
+.light-shell h4 {
+  color: var(--ink);
+}
+
+.light-shell p {
+  color: var(--ink-soft);
+}
+
+.light-shell .eyebrow,
+.light-shell .eyebrow::before {
+  color: var(--accent);
+  background: var(--accent);
+}
+
 section {
   position: relative;
   padding: 96px 0;
@@ -161,5 +206,22 @@ section {
 @media (max-width: 720px) {
   section {
     padding: 64px 0;
+  }
+}
+
+.reveal {
+  opacity: 1;
+  transform: translateY(16px);
+  transition: transform 0.7s cubic-bezier(0.16, 0.8, 0.2, 1), opacity 0.7s ease;
+}
+
+.reveal.in-view {
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    transform: none !important;
+    transition: none !important;
   }
 }

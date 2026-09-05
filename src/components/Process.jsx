@@ -1,3 +1,5 @@
+import { useEffect, useRef, useState } from "react";
+import Reveal from "./Reveal";
 import "./Process.css";
 
 const STEPS = [
@@ -27,41 +29,75 @@ const STEPS = [
   },
 ];
 
-const ACTIVE_INDEX = 1;
-
 export default function Process() {
+  const trackRef = useRef(null);
+  const [progress, setProgress] = useState(0);
+
+  useEffect(() => {
+    const prefersReduced = window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    ).matches;
+    if (prefersReduced) {
+      setProgress(1);
+      return;
+    }
+
+    let ticking = false;
+    const onScroll = () => {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(() => {
+        const el = trackRef.current;
+        if (el) {
+          const rect = el.getBoundingClientRect();
+          const vh = window.innerHeight;
+          const total = rect.height + vh * 0.5;
+          const passed = vh * 0.8 - rect.top;
+          setProgress(Math.max(0, Math.min(1, passed / total)));
+        }
+        ticking = false;
+      });
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  const pct = `${(progress * 100).toFixed(1)}%`;
+  const activeIndex = Math.min(3, Math.floor(progress * 4));
+
   return (
-    <section id="como-trabajamos" className="process">
+    <section id="como-trabajamos" className="method">
       <div className="container">
-        <div className="process__header">
-          <span className="eyebrow">Cómo trabajamos</span>
-          <h2>Empecemos a calibrar tu negocio.</h2>
-        </div>
+        <Reveal as="span" className="eyebrow method__eyebrow">
+          Cómo trabajamos
+        </Reveal>
+        <Reveal as="h2" className="method__title">
+          Empecemos a calibrar tu negocio.
+        </Reveal>
 
-        <div className="process__track">
-          <span className="process__pill">
-            <span className="process__pill-icon">❙❙</span> Diagnóstico
-          </span>
-          <div className="process__line">
-            <div className="process__line-fill" style={{ width: "50%" }} />
-            <span className="process__dot" style={{ left: "50%" }} />
-          </div>
-          <span className="process__pill">
-            <span className="process__pill-icon">▶</span> Resultado
-          </span>
-        </div>
-
-        <div className="process__grid">
-          {STEPS.map((item, i) => (
-            <div
-              className={`process-card${i === ACTIVE_INDEX ? " process-card--active" : ""}`}
-              key={item.step}
-            >
-              <span className="process-card__step">{item.step}</span>
-              <h3>{item.title}</h3>
-              <p>{item.description}</p>
+        <div className="scrubber" ref={trackRef}>
+          <div className="scrub-row">
+            <div className="scrub-end">‖ Diagnóstico</div>
+            <div className="scrub-track">
+              <div className="scrub-fill" style={{ width: pct }} />
+              <div className="scrub-dot" style={{ left: pct }} />
             </div>
-          ))}
+            <div className="scrub-end">▶ Resultado</div>
+          </div>
+
+          <div className="method-steps">
+            {STEPS.map((item, i) => (
+              <div
+                className={`method-step${i === activeIndex ? " active" : ""}`}
+                key={item.step}
+              >
+                <span className="n">{item.step}</span>
+                <h3>{item.title}</h3>
+                <p>{item.description}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

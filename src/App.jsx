@@ -1,9 +1,10 @@
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
-import Audience from "./components/Audience";
 import Services from "./components/Services";
 import About from "./components/About";
 import Process from "./components/Process";
+import Signals from "./components/Signals";
+import Approach from "./components/Approach";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
@@ -13,10 +14,13 @@ function App() {
       <Navbar />
       <main>
         <Hero />
-        <Audience />
-        <Services />
-        <About />
-        <Process />
+        <div className="light-shell">
+          <Services />
+          <About />
+          <Process />
+          <Signals />
+        </div>
+        <Approach />
         <Contact />
       </main>
       <Footer />
