@@ -25,6 +25,52 @@
   height: 500px;
   background: radial-gradient(circle, rgba(77, 124, 240, 0.25), transparent 70%);
   pointer-events: none;
+  animation: glow-drift 14s ease-in-out infinite alternate;
+}
+
+.hero__circuit .circuit-lines path {
+  stroke-dasharray: 8 12;
+  animation: circuit-flow 9s linear infinite;
+}
+
+.hero__circuit .circuit-dot {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: circuit-pulse 2.6s ease-in-out infinite;
+}
+
+@keyframes circuit-flow {
+  to {
+    stroke-dashoffset: -200;
+  }
+}
+
+@keyframes circuit-pulse {
+  0%, 100% {
+    opacity: 0.55;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.35);
+  }
+}
+
+@keyframes glow-drift {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-40px, 30px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__glow,
+  .hero__circuit .circuit-lines path,
+  .hero__circuit .circuit-dot {
+    animation: none;
+  }
 }
 
 .hero__inner {

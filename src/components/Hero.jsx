@@ -19,8 +19,9 @@ export default function Hero() {
           resultados y comunicación funcionando en una misma dirección.
         </p>
         <div className="hero__actions">
-          <a href="#contacto" className="btn btn-primary">
+          <a href="#contacto" className="btn btn-cta">
             Agendemos una charla
+            <span className="btn-cta__icon">+</span>
           </a>
           <a href="#areas" className="btn btn-ghost">
             Ver qué hacemos

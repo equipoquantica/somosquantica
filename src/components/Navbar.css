@@ -5,21 +5,28 @@
   right: 0;
   z-index: 100;
   padding: 20px 0;
-  transition: background 0.25s ease, padding 0.25s ease, border-color 0.25s ease;
-  border-bottom: 1px solid transparent;
 }
 
-.navbar--scrolled {
-  background: rgba(8, 18, 38, 0.85);
-  backdrop-filter: blur(10px);
-  padding: 14px 0;
-  border-bottom-color: var(--border);
+.navbar__row {
+  display: flex;
+  justify-content: center;
 }
 
-.navbar__inner {
+.navbar__pill {
+  width: 100%;
+  max-width: 920px;
   display: flex;
   align-items: center;
   gap: 32px;
+  background: var(--cream);
+  border-radius: 999px;
+  padding: 8px 8px 8px 22px;
+  box-shadow: 0 16px 40px -12px rgba(3, 8, 20, 0.55);
+  transition: box-shadow 0.25s ease;
+}
+
+.navbar--scrolled .navbar__pill {
+  box-shadow: 0 20px 48px -10px rgba(3, 8, 20, 0.65);
 }
 
 .navbar__brand {
@@ -30,47 +37,62 @@
 }
 
 .navbar__mark {
-  width: 34px;
-  height: 34px;
-  border-radius: 10px;
-  background: var(--cream);
+  width: 32px;
+  height: 32px;
+  border-radius: 9px;
+  background: var(--white);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
   overflow: hidden;
+  box-shadow: inset 0 0 0 1px rgba(8, 18, 38, 0.06);
 }
 
 .navbar__mark img {
-  width: 22px;
-  height: 22px;
+  width: 21px;
+  height: 21px;
   object-fit: contain;
 }
 
 .navbar__name {
   font-family: var(--font-heading);
   font-weight: 700;
-  font-size: 1.15rem;
-  color: var(--white);
+  font-size: 1.05rem;
+  color: var(--bg);
   letter-spacing: -0.01em;
 }
 
 .navbar__links {
   display: flex;
   align-items: center;
-  gap: 28px;
-  font-size: 0.92rem;
+  gap: 26px;
+  font-size: 0.9rem;
   font-weight: 600;
-  color: var(--text-muted);
+  color: rgba(8, 18, 38, 0.65);
 }
 
 .navbar__links a:hover {
-  color: var(--white);
+  color: var(--bg);
 }
 
 .navbar__cta {
-  padding: 11px 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg);
+  color: var(--white);
+  font-weight: 700;
   font-size: 0.88rem;
+  padding: 13px 24px;
+  border-radius: 999px;
+  white-space: nowrap;
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+
+.navbar__cta:hover {
+  background: var(--panel-light);
+  transform: translateY(-1px);
 }
 
 .navbar__toggle {
@@ -80,18 +102,19 @@
   background: none;
   border: none;
   padding: 6px;
+  margin-right: 6px;
 }
 
 .navbar__toggle span {
-  width: 22px;
+  width: 20px;
   height: 2px;
-  background: var(--white);
+  background: var(--bg);
   border-radius: 2px;
 }
 
 .navbar__mobile {
   position: fixed;
-  top: 68px;
+  top: 76px;
   left: 0;
   right: 0;
   bottom: 0;
@@ -118,8 +141,7 @@
   .navbar__toggle {
     display: flex;
   }
-  .navbar,
-  .navbar--scrolled {
-    padding: 17px 0;
+  .navbar__pill {
+    padding: 8px 10px 8px 18px;
   }
 }

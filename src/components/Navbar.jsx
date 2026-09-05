@@ -29,36 +29,38 @@ export default function Navbar() {
 
   return (
     <header className={`navbar ${scrolled ? "navbar--scrolled" : ""}`}>
-      <div className="container navbar__inner">
-        <a href="#top" className="navbar__brand">
-          <span className="navbar__mark">
-            <img src={logoMark} alt="" width="28" height="28" />
-          </span>
-          <span className="navbar__name">Quantica</span>
-        </a>
+      <div className="container navbar__row">
+        <div className="navbar__pill">
+          <a href="#top" className="navbar__brand">
+            <span className="navbar__mark">
+              <img src={logoMark} alt="" width="28" height="28" />
+            </span>
+            <span className="navbar__name">qüantica</span>
+          </a>
 
-        <nav className="navbar__links">
-          {LINKS.map((link) => (
-            <a key={link.href} href={link.href}>
-              {link.label}
-            </a>
-          ))}
-        </nav>
+          <nav className="navbar__links">
+            {LINKS.map((link) => (
+              <a key={link.href} href={link.href}>
+                {link.label}
+              </a>
+            ))}
+          </nav>
 
-        <a href="#contacto" className="btn btn-primary navbar__cta">
-          Agendemos una charla
-        </a>
+          <a href="#contacto" className="navbar__cta">
+            Contáctanos
+          </a>
 
-        <button
-          className="navbar__toggle"
-          aria-label="Abrir menú"
-          aria-expanded={open}
-          onClick={() => setOpen((v) => !v)}
-        >
-          <span />
-          <span />
-          <span />
-        </button>
+          <button
+            className="navbar__toggle"
+            aria-label="Abrir menú"
+            aria-expanded={open}
+            onClick={() => setOpen((v) => !v)}
+          >
+            <span />
+            <span />
+            <span />
+          </button>
+        </div>
       </div>
 
       {open && (
