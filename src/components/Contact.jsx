@@ -2,6 +2,8 @@ import Reveal from "./Reveal";
 import "./Contact.css";
 
 const EMAIL = "equipo.quantica@gmail.com";
+const WHATSAPP_DISPLAY = "+54 9 11 5803-7288";
+const WHATSAPP_LINK = "https://wa.me/5491158037288";
 
 export default function Contact() {
   return (
@@ -20,14 +22,17 @@ export default function Contact() {
             <a href={`mailto:${EMAIL}`} className="btn btn-outline">
               {EMAIL}
             </a>
-            <a href={`mailto:${EMAIL}`} className="btn btn-cta">
-              Agendemos una charla
+            <a
+              href={WHATSAPP_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-cta"
+            >
+              Escribinos por WhatsApp
               <span className="btn-cta__icon">+</span>
             </a>
           </div>
-          <p className="cta-final__note">
-            Teléfono / WhatsApp: +54 9 11 0000-0000 <em>(a completar)</em>
-          </p>
+          <p className="cta-final__note">WhatsApp: {WHATSAPP_DISPLAY}</p>
         </Reveal>
       </div>
     </section>
