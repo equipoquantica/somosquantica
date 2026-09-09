@@ -1,30 +1,51 @@
 import CircuitPattern from "./CircuitPattern";
 import "./Hero.css";
 
+const WHATSAPP_LINK = "https://wa.me/5491158037288";
+
 export default function Hero() {
   return (
     <section id="top" className="hero">
       <CircuitPattern className="hero__circuit" />
       <div className="hero__glow" />
       <div className="container hero__inner">
-        <span className="eyebrow">Consultora integral</span>
-        <h1 className="hero__title">
-          Todo está conectado.
+        <span className="eyebrow">Qüantica</span>
+
+        <p className="hero__lead">
+          Una decisión impacta en otra.
           <br />
-          Tu empresa también.
-        </h1>
-        <p className="hero__subtitle">
-          Quantica es un método de gestión, operado por personas con criterio,
-          que trata a tu empresa como un ecosistema: liderazgo, procesos,
-          resultados y comunicación funcionando en una misma dirección.
+          Un proceso afecta un resultado.
+          <br />
+          Tu liderazgo condiciona tu equipo.
         </p>
+
+        <h1 className="hero__title">Todo está conectado.</h1>
+
+        <div className="hero__body">
+          <p>Pero probablemente no estés mirando todas las conexiones.</p>
+          <p>
+            Por eso algunas decisiones te cuestan más de lo que deberían,
+            algunos procesos no rinden como deberían, y algunos resultados
+            dependen solo de vos.
+          </p>
+          <p className="hero__body-strong">
+            Nosotros sí miramos todas las conexiones. Y sabemos exactamente
+            dónde están los puntos que, si se ordenan, cambian todo.
+          </p>
+        </div>
+
         <div className="hero__actions">
           <a href="#contacto" className="btn btn-cta">
-            Agendemos una charla
+            Agendar conversación
             <span className="btn-cta__icon">+</span>
           </a>
-          <a href="#areas" className="btn btn-ghost">
-            Ver qué hacemos
+          <a
+            href={WHATSAPP_LINK}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-outline"
+          >
+            Escribir por WhatsApp
           </a>
         </div>
       </div>
