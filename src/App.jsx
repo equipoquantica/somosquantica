@@ -3,7 +3,7 @@ import Hero from "./components/Hero";
 import Services from "./components/Services";
 import About from "./components/About";
 import Process from "./components/Process";
-import Signals from "./components/Signals";
+import Diagnostic from "./components/Diagnostic";
 import Approach from "./components/Approach";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
@@ -19,7 +19,7 @@ function App() {
         <div className="light-shell">
           <Process />
         </div>
-        <Signals />
+        <Diagnostic />
         <Approach />
         <Contact />
       </main>
