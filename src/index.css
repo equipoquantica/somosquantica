@@ -177,7 +177,7 @@ button {
 .light-shell {
   background: var(--paper);
   color: var(--ink);
-  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  border-radius: var(--radius-lg);
   position: relative;
   z-index: 2;
 }

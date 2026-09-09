@@ -6,15 +6,17 @@ export default function Approach() {
     <section className="approach-dark" id="enfoque">
       <div className="container approach-grid">
         <Reveal as="svg" className="venn" viewBox="0 0 300 220" fill="none">
-          <circle cx="110" cy="110" r="85" stroke="var(--border-strong)" />
-          <circle cx="190" cy="110" r="85" stroke="var(--accent)" />
-          <circle cx="150" cy="60" r="55" stroke="var(--accent-2)" opacity=".6" />
+          <g className="venn__group">
+            <circle cx="110" cy="110" r="85" stroke="var(--border-strong)" />
+            <circle cx="190" cy="110" r="85" stroke="var(--accent)" />
+            <circle cx="150" cy="60" r="55" stroke="var(--accent-2)" opacity=".6" />
+          </g>
         </Reveal>
         <Reveal>
           <span className="eyebrow">Todo está conectado</span>
           <h2>¿Por qué Quantica no separa liderazgo, gestión y comunicación?</h2>
           <p>
-            <strong>Liderazgo — MR:</strong> dirección de equipo, delegación y
+            <strong>Liderazgo:</strong> dirección de equipo, delegación y
             las relaciones que sostienen los resultados del negocio.
           </p>
           <p>

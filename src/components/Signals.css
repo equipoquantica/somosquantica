@@ -1,5 +1,8 @@
 .signals {
-  padding: 40px 0 110px;
+  padding: 100px 0 110px;
+  background: var(--bg-soft);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
 }
 
 .signals-head {
@@ -25,7 +28,7 @@
 }
 
 .acc-item {
-  border: 1px solid var(--line-strong);
+  border: 1px solid var(--border-strong);
   border-radius: 28px;
   padding: 26px 30px;
   margin-bottom: 14px;
@@ -34,7 +37,7 @@
 }
 
 .acc-item.open {
-  background: rgba(30, 155, 239, 0.1);
+  background: rgba(30, 155, 239, 0.16);
   border-color: transparent;
 }
 
@@ -54,13 +57,13 @@
   width: 34px;
   height: 34px;
   border-radius: 50%;
-  border: 1px solid var(--line-strong);
+  border: 1px solid var(--border-strong);
   flex: none;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 16px;
-  color: var(--ink);
+  color: var(--white);
 }
 
 .acc-item.open .acc-toggle {

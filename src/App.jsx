@@ -18,8 +18,8 @@ function App() {
         <About />
         <div className="light-shell">
           <Process />
-          <Signals />
         </div>
+        <Signals />
         <Approach />
         <Contact />
       </main>

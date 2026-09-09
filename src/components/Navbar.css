@@ -18,7 +18,7 @@
   display: flex;
   align-items: center;
   gap: 32px;
-  background: var(--cream);
+  background: var(--white);
   border-radius: 999px;
   padding: 8px 8px 8px 22px;
   box-shadow: 0 16px 40px -12px rgba(3, 8, 20, 0.55);

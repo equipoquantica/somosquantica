@@ -16,6 +16,24 @@
 .venn {
   width: 100%;
   max-width: 360px;
+  overflow: visible;
+}
+
+.venn__group {
+  transform-origin: 150px 110px;
+  animation: venn-spin 22s linear infinite;
+}
+
+@keyframes venn-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .venn__group {
+    animation: none;
+  }
 }
 
 .approach-dark .eyebrow {
