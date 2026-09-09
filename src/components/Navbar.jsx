@@ -35,7 +35,7 @@ export default function Navbar() {
             <span className="navbar__mark">
               <img src={logoMark} alt="" width="28" height="28" />
             </span>
-            <span className="navbar__name">Qüantica</span>
+            <span className="navbar__name">üantica</span>
           </a>
 
           <nav className="navbar__links">

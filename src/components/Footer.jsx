@@ -14,7 +14,7 @@ export default function Footer() {
               <span className="footer-mark">
                 <img src={logoMark} alt="" width="20" height="20" />
               </span>
-              <span>Qüantica</span>
+              <span>üantica</span>
             </a>
             <div className="footer-tag">Todo está conectado.</div>
             <p className="footer-desc">

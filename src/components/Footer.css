@@ -15,7 +15,7 @@
 .footer-brand {
   display: flex;
   align-items: center;
-  gap: 9px;
+  gap: 3px;
   font-family: var(--font-heading);
   font-weight: 700;
   font-size: 1.1rem;
