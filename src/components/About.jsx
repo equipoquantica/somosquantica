@@ -3,7 +3,7 @@ import "./About.css";
 const CHAIN = [
   { label: "Liderazgo", detail: "Un cambio en el liderazgo modifica la manera de delegar." },
   { label: "Gestión", detail: "Eso permite una mejor organización de la gestión." },
-  { label: "Indicadores", detail: "Una gestión con mejores indicadores genera información para decidir." },
+  { label: "Indicadores", detail: "Una gestión con mejores indicadores genera información para decidir (Sistema de gestión a medida)." },
   { label: "Comunicación", detail: "Esas decisiones modifican la estrategia de comunicación y desarrollo digital." },
 ];
 
