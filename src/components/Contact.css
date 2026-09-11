@@ -50,15 +50,6 @@
   justify-content: flex-end;
 }
 
-.cta-final__note {
-  font-size: 0.85rem;
-}
-
-.cta-final__note em {
-  font-style: normal;
-  opacity: 0.7;
-}
-
 @media (max-width: 720px) {
   .cta-final__inner {
     flex-direction: column;

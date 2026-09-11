@@ -15,23 +15,26 @@
 .footer-brand {
   display: flex;
   align-items: center;
-  gap: 3px;
-  font-family: var(--font-heading);
-  font-weight: 700;
-  font-size: 1.1rem;
+  gap: 2px;
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 1.2rem;
   margin-bottom: 22px;
   color: var(--white);
 }
 
 .footer-mark {
-  width: 26px;
-  height: 26px;
-  border-radius: 8px;
-  background: var(--cream);
+  width: 24px;
+  height: 24px;
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
+  color: var(--white);
+}
+
+.footer-mark svg {
+  width: 100%;
+  height: 100%;
 }
 
 .footer-tag {

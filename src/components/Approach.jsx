@@ -24,8 +24,9 @@ export default function Approach() {
             que permiten decidir con información real, no con intuición.
           </p>
           <p>
-            <strong>Desarrollo digital:</strong> comunicación y presencia
-            alineadas con la estrategia, no como una isla aparte.
+            <strong>Desarrollo digital:</strong> sistemas de gestión,
+            desarrollo web y comunicación alineados con la estrategia, no
+            como una isla aparte.
           </p>
           <p className="bold-line">— un mismo sistema, sin partes sueltas —</p>
           <a href="#contacto" className="btn btn-cta">

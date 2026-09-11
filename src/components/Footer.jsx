@@ -1,4 +1,4 @@
-import logoMark from "../assets/logo-mark.png";
+import QMark from "./QMark";
 import "./Footer.css";
 
 const EMAIL = "equipo.quantica@gmail.com";
@@ -12,7 +12,7 @@ export default function Footer() {
           <div>
             <a href="#top" className="footer-brand">
               <span className="footer-mark">
-                <img src={logoMark} alt="" width="20" height="20" />
+                <QMark />
               </span>
               <span>üantica</span>
             </a>

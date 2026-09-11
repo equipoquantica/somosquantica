@@ -1,8 +1,6 @@
 import CircuitPattern from "./CircuitPattern";
 import "./Hero.css";
 
-const WHATSAPP_LINK = "https://wa.me/5491158037288";
-
 export default function Hero() {
   return (
     <section id="top" className="hero">
@@ -38,14 +36,6 @@ export default function Hero() {
           <a href="#contacto" className="btn btn-cta">
             Agendar conversación
             <span className="btn-cta__icon">+</span>
-          </a>
-          <a
-            href={WHATSAPP_LINK}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn btn-outline"
-          >
-            Escribir por WhatsApp
           </a>
         </div>
       </div>

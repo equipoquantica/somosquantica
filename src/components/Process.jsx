@@ -7,13 +7,13 @@ const STEPS = [
     step: "01",
     title: "Diagnóstico",
     description:
-      "Miramos antes de tocar nada: procesos, equipo y números tal como están hoy.",
+      "Observamos procesos, equipo y números tal como están hoy.",
   },
   {
     step: "02",
     title: "Diseño",
     description:
-      "Una solución a medida del negocio real, no una plantilla genérica.",
+      "Una solución a medida del negocio real, gestión y orden para mantener en el tiempo.",
   },
   {
     step: "03",
@@ -25,7 +25,7 @@ const STEPS = [
     step: "04",
     title: "Mejora continua",
     description:
-      "Ajustamos con datos y resultados medibles, no con intuición.",
+      "Ajustamos con datos y resultados medibles.",
   },
 ];
 

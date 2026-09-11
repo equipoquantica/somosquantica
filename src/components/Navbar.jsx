@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import logoMark from "../assets/logo-mark.png";
+import QMark from "./QMark";
 import "./Navbar.css";
 
 const LINKS = [
@@ -33,7 +33,7 @@ export default function Navbar() {
         <div className="navbar__pill">
           <a href="#top" className="navbar__brand">
             <span className="navbar__mark">
-              <img src={logoMark} alt="" width="28" height="28" />
+              <QMark />
             </span>
             <span className="navbar__name">üantica</span>
           </a>

@@ -3,7 +3,7 @@ import "./Services.css";
 const AREAS = [
   {
     tag: "Liderazgo",
-    name: "Mejores Relaciones, Mejores Resultados",
+    name: "MR — Mejores Relaciones, Mejores Resultados",
     description:
       "El área de liderazgo de Quantica. Trabaja la dirección del equipo, la forma de delegar y las relaciones que sostienen los resultados del negocio.",
     items: ["Dirección de equipos", "Delegación efectiva", "Cultura y liderazgo"],
@@ -17,10 +17,10 @@ const AREAS = [
   },
   {
     tag: "Desarrollo digital",
-    name: "Presencia y comunicación",
+    name: "Desarrollo de Sistemas de Gestión, Web y Comunicación Digital",
     description:
       "Comunicación y presencia digital alineadas con la estrategia del negocio, no como una isla aparte.",
-    items: ["Marketing y redes sociales", "Desarrollo digital", "Estrategia de comunicación"],
+    items: ["Sistemas de gestión a medida", "Desarrollo web", "Estrategia de comunicación"],
   },
 ];
 

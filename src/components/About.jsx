@@ -29,6 +29,11 @@ export default function About() {
             indicadores; los indicadores cambian cómo comunicás. Quantica
             mira ese recorrido completo, no un tramo suelto.
           </p>
+          <p>
+            Ese mismo criterio se extiende al desarrollo de sistemas de
+            gestión y de la presencia web: no son un anexo aparte, son parte
+            del mismo engranaje.
+          </p>
           <div className="about__traits">
             {TRAITS.map((trait) => (
               <span key={trait} className="about__trait">
