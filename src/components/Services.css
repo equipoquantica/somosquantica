@@ -93,6 +93,22 @@
   background: var(--blue-line);
 }
 
+.service-card__link {
+  align-self: flex-start;
+  margin-top: auto;
+  padding-top: 12px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--blue-line);
+  border-top: 1px solid var(--border);
+  width: 100%;
+  transition: color 0.15s ease;
+}
+
+.service-card__link:hover {
+  color: var(--white);
+}
+
 @media (max-width: 900px) {
   .services__grid {
     grid-template-columns: 1fr;

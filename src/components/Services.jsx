@@ -7,6 +7,7 @@ const AREAS = [
     description:
       "El área de liderazgo de Quantica. Trabaja la dirección del equipo, la forma de delegar y las relaciones que sostienen los resultados del negocio.",
     items: ["Dirección de equipos", "Delegación efectiva", "Cultura y liderazgo"],
+    link: { href: "https://web.alexianor.com/landing-page-5208", label: "Método MR →" },
   },
   {
     tag: "Gestión y optimización",
@@ -21,6 +22,7 @@ const AREAS = [
     description:
       "Comunicación y presencia digital alineadas con la estrategia del negocio, no como una isla aparte.",
     items: ["Sistemas de gestión a medida", "Desarrollo web", "Estrategia de comunicación"],
+    link: { href: "https://infinitesolutions.com.ar", label: "Equipo técnico: Infinite Solutions →" },
   },
 ];
 
@@ -49,6 +51,16 @@ export default function Services() {
                   <li key={item}>{item}</li>
                 ))}
               </ul>
+              {area.link && (
+                <a
+                  href={area.link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="service-card__link"
+                >
+                  {area.link.label}
+                </a>
+              )}
             </article>
           ))}
         </div>
