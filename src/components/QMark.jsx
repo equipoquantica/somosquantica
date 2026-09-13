@@ -7,18 +7,18 @@ export default function QMark({ className = "" }) {
       xmlns="http://www.w3.org/2000/svg"
       aria-hidden="true"
     >
-      <g stroke="rgba(8, 18, 38, 0.4)" strokeWidth="6.2" strokeLinecap="round">
+      <g stroke="rgba(8, 18, 38, 0.4)" strokeWidth="4" strokeLinecap="round">
         <path
-          d="M24.96 6.37 A14.5 14.5 0 1 1 15.04 6.37"
-          transform="translate(1.6, 2)"
+          d="M25.3 5.43 A15.5 15.5 0 1 1 14.7 5.43"
+          transform="translate(1.2, 1.5)"
         />
-        <path d="M23 24 L35.5 36.5" transform="translate(1.6, 2)" />
+        <path d="M23 25 L36 38" transform="translate(1.2, 1.5)" />
       </g>
-      <g stroke="currentColor" strokeWidth="6.2" strokeLinecap="round">
-        <path d="M24.96 6.37 A14.5 14.5 0 1 1 15.04 6.37" />
-        <path d="M23 24 L35.5 36.5" />
+      <g stroke="currentColor" strokeWidth="4" strokeLinecap="round">
+        <path d="M25.3 5.43 A15.5 15.5 0 1 1 14.7 5.43" />
+        <path d="M23 25 L36 38" />
       </g>
-      <circle cx="20" cy="5.1" r="2.1" fill="currentColor" />
+      <circle cx="20" cy="3.8" r="1.6" fill="currentColor" />
     </svg>
   );
 }
